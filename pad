@@ -1,0 +1,17 @@
+local plr = game.Players.LocalPlayer
+local name = game.Players.LocalPlayer.Name
+
+local pad = Instance.new("Part")
+pad.Parent = workspace
+pad.Locked = true
+pad.BrickColor = BrickColor.new("Black")
+pad.BrickColor = BrickColor.new(0,0,0)
+pad.Size = Vector3.new(8, 1, 8)
+pad.Anchored = true
+local m = Instance.new("CylinderMesh")
+m.Scale = Vector3.new(1, 0.5, 1)
+m.Parent = pad
+while true do
+	pad.CFrame = CFrame.new(game.Players:findFirstChild(name).Character.Torso.CFrame.x, game.Players:findFirstChild(name).Character.Torso.CFrame.y - 4, game.Players:findFirstChild(name).Character.Torso.CFrame.z)
+	wait()
+end
